@@ -1,0 +1,98 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	background-color: #eae3ea;
+}
+.card{
+	position: relative;
+	margin: auto;
+	display: block;
+	margin-top: 6%;
+	width: 640px;
+	height: 480px;
+	text-align: center;
+	border: 10px solid #a7b3ae;
+	background-color: #fff;
+
+}
+.front, .back{
+	position: absolute;
+	top: 6%;
+	left: 6%;
+	width: 88%;
+	height: 88%;	
+}
+.front, .back{
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden:
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+.front{
+	background-image: url(mtn.jpg);
+	-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+}
+.back{
+	background-image: url(beach.png);
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+.card.effect:hover .front{
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+.card.effect:hover .back{
+	-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+}
+
+/*style circle and text within the circle*/
+.circle{
+	position: absolute;
+	width: 38%;
+	height: 50%;
+	border-radius: 50%;
+	opacity: 0.8;
+}
+.front .circle{
+	top: 25%;
+	left: 31%;
+	background: #b56357;
+}
+.back .circle{
+	top: 25%;
+	left: 31%;
+	background: #b4dbc0;
+}
+.text-1{
+	font-family:'Lobster', cursive;
+	font-size: 4em;
+	color: white;
+	position: absolute;
+	top: 42%;
+	left: 38%;
+	text-align: center;
+}
+.text-2{
+	width: 24%;
+	height: 7%;
+	font-family:'Lobster', cursive;
+	font-size: 3em;
+	color: white;
+	position: absolute;
+	top: 28%;
+	left: 39%;
+	text-align: center;
+}
+footer ul {
+	text-align: center;
+	list-style-type: none;
+	padding-top: 40px;
+	font-size: 0.8em;
+	letter-spacing: 1px;
+	font-family: 'Raleway', sans-serif;
+}
+footer li{
+	display: inline;
+}
